@@ -7,7 +7,7 @@ class Pokemon{
 
 
 //public class PokemonGame
-//    public static void main(String[] args) {
+//
 //        Pokemon pikachu = new Pokemon();
 //        Pokemon squirtle = new Pokemon();
 //
