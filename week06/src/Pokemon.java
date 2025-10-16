@@ -13,32 +13,29 @@ public abstract class Pokemon {
     public String getName(){
         return name;
     }
-    public int getHP(){
-        public int getHp(){
-            return hp;
-        }
-        public int getAttackPower() {
-            return attackPower;
-        }
-
-        public void setHp(int hp) {
-            this.hp = hp;
-        }
-
-        public abstract void attack(Pokemon target);
-        public void receiveDamage(int damage){
-            hp = hp-damage;
-            if(hp < 0) hp=0
-
-        }
-
-        public boolean isFainted(){
-            return hp <= 0;
-        }
-
-
-        @Override
-        public String toString() {
-            return name + " (HP : " + hp + ", AttackPower : " + attackPower + ")" ;
-        }
+    public int getHp(){
+        return hp;
     }
+    public int getAttackPower() {
+        return attackPower;
+    }
+
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
+    public abstract void attack(Pokemon target);
+    public void receiveDamage(int damage){
+        hp = hp - damage;
+        if(hp < 0) hp = 0;
+    }
+
+    public boolean isFainted(){
+        return hp <= 0;
+    }
+
+    @Override
+    public String toString() {
+        return name + " (HP : " + hp + ", AttackPower : " + attackPower + ")" ;
+    }
+}
