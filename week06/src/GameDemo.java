@@ -9,6 +9,7 @@ public class GameDemo {
         Squirtle yourSquirtle = new Squirtle(120, 21);
         System.out.println("Game start~");
         myPikachu.attcak(yourSquirtle);
+        for(int i=0;i<5;1++)
         yourSquirtle.attcak(myPikachu);
 
         System.out.println(yourPikachu);

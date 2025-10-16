@@ -1,5 +1,6 @@
 public abstract class Pokemon {
-    protected String name;
+    private String name;
+    //    protected String name;
     private int hp;
     private int attackPower;
 
@@ -13,12 +14,31 @@ public abstract class Pokemon {
         return name;
     }
     public int getHP(){
-        return hp;
-    }
-    public abstract void attcak(Pokemon target);
+        public int getHp(){
+            return hp;
+        }
+        public int getAttackPower() {
+            return attackPower;
+        }
 
-    @Override
-    public String toString() {
-        return name + " (HP : " + hp + ", AttackPoer : "+ attackPower + ")";
+        public void setHp(int hp) {
+            this.hp = hp;
+        }
+
+        public abstract void attack(Pokemon target);
+        public void receiveDamage(int damage){
+            hp = hp-damage;
+            if(hp < 0) hp=0
+
+        }
+
+        public boolean isFainted(){
+            return hp <= 0;
+        }
+
+
+        @Override
+        public String toString() {
+            return name + " (HP : " + hp + ", AttackPower : " + attackPower + ")" ;
+        }
     }
-}
