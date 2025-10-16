@@ -6,7 +6,6 @@ public class Squirtle extends Pokemon{
 
     @Override
     public void attcak(Pokemon target) {
-        //   System.out.println(getName() + " -> " + target.getName()); // name is private
         System.out.println(name + " -> " + target.getName() + "에게 '하이드로펌프' 사용"); // name is protected
     }
 }
