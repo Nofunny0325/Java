@@ -1,2 +1,12 @@
-public class Squirtle {
+public class Squirtle extends Pokemon{
+    public Squirtle(int hp){
+        super("꼬북이", hp); // 부모 클래스의 생성자 호출
+        System.out.println("꼬북꼬북~");
+    }
+
+    @Override
+    public void attcak(Pokemon target) {
+        //   System.out.println(getName() + " -> " + target.getName()); // name is private
+        System.out.println(name + " -> " + target.getName() + "에게 '하이드로펌프' 사용"); // name is protected
+    }
 }
