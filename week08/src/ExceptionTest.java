@@ -7,8 +7,16 @@ public class ExceptionTest {
         int numerator = scanner.nextInt();
         System.out.println();
         System.out.print("Input demoninator : ");
+//        double demoninator = scanner.nextDouble();
         int demoninator = scanner.nextInt();
 
-        System.out.println(numerator/demoninator);
+        if(demoninator == 0){
+            System.out.println("분모에 0이 올 수 없습니다!");
+        }else{
+            System.out.println(numerator/demoninator);
+        }
+
+
+//        System.out.println(numerator/demoninator);
     }
 }
