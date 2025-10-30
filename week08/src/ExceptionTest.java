@@ -11,17 +11,13 @@ public class ExceptionTest {
             numerator = scanner.nextInt();
             System.out.println();
             System.out.print("Input demoninator : ");
-//        double demoninator = scanner.nextDouble();
             demoninator = scanner.nextInt();
-        }catch (InputMismatchException err){
-            System.out.println("숫자로 입력하세요.");
-        }
 
-
-        if(demoninator == 0){
-            System.out.println("분모에 0이 올 수 없습니다!"); // logical error
-        }else{
             System.out.println(numerator/demoninator);
+        }catch (InputMismatchException err) {
+            System.out.println("숫자로 입력하세요.");
+        }catch (ArithmeticException err){
+            System.out.println("분모에 0이 올 수 없습니다!");
         }
     }
 }
